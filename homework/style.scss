@@ -1,0 +1,106 @@
+@font-face {
+   font-family: 'Montserrat';
+   src: url('./fonts/Montserrat-Regular.woff');
+}
+
+$white: #FBF7F6;
+$textpurpul: #371030;
+$lightpink: #FFB0BA;
+$textpink: #9A3C48;
+$hoverpink: #dd8893;
+$shadowpink: #DE8E98;
+
+@mixin button ($padding){
+   padding: 15px $padding;
+   position: absolute;
+   text-align: center;
+   font-weight: 900;
+   color: $textpink;
+   background: $lightpink;
+   box-shadow: 3px 3px 0px 3px $shadowpink;
+   border-radius: 100px;
+   cursor: pointer;
+   transition: 0.3s;
+   border: none;
+}
+
+body {
+   margin: 0;
+   padding: 0;}
+   
+   .container {
+      max-width: 1250px;
+      margin: 0 auto;
+      padding: 150px 25px;
+      background: url(./image/bg.jpg);
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      position: relative;  
+
+      .form-wrapper {
+         display: flex;
+         width: 808px;
+         height: 351px;
+         background: $white;
+         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+         border-radius: 15px;
+         
+         .form{
+            width: 45%;
+            padding: 32px;
+            font-family: 'Montserrat';
+
+            &__text{
+               font-size: 15px;
+               font-weight: 700;
+               color: $textpurpul;
+               letter-spacing: 1px;
+               margin: 0 0 10px 0;
+               }
+           
+            &__control{
+               display: flex;
+               justify-content: space-between; 
+               flex-direction: column;  
+               position: relative;
+               padding-bottom: 20px;
+                       
+               .form__control-el{
+                  display: flex;
+                  justify-content: space-between; 
+                  }
+               
+               .form__input {
+                  width: 100%;
+                  font-size: 16px;
+                  border: none;
+                  padding: 10px 0px;
+                  border-bottom: 1px solid $textpurpul;
+                  outline: none;
+                  background-color: $white;
+                  transition: 0.3s;
+                  letter-spacing: 1px;
+                  }
+                  
+                  .form__input:first-child {
+                  margin-right: 20px;}
+                  }
+                     
+            .form__button{
+               @include button (110px)
+               }
+
+            .form__button:hover {
+               background: $hoverpink;
+               transition: 0.3s;
+               }
+            }
+
+         .image{
+            width: 55%;
+            background-image: url(./image/cover9\ 1.jpg);
+            background-repeat:  no-repeat;
+         }
+   }    
+}
