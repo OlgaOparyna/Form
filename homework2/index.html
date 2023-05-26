@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <title>ХоббиАрт</title>
+   <link rel="stylesheet" href="./style.scss">
+</head>
+
+<body>
+   <div class="form-wrapper">
+      <form action="#" class="form">
+         <h2>Способ получения</h2>
+         <div class="form__control">
+            <input type="text" name="city" class="form__input" placeholder="Город*" required>
+         </div>
+         <div class="form__control">
+            <select name="post" class="form__input">
+               <outgroup label for="post">
+                  <option value="1">Почта России </option>
+                  <option value="2">СДЭК</option>
+                  <option value="3">Стриж</option>
+               </outgroup>
+            </select>
+         </div>
+         <div class="form__control">
+            <div class="form__control-el">
+               <input type="text" name="street" class="form__input" style="width: 254px;" placeholder="Улица" required>
+               <input type="text" name="house" class="form__input" placeholder="Дом" required>
+               <input type="number" name="apart" class="form__input" placeholder="Квартира">
+               <input type="number" name="zip" class="form__input" placeholder="Индекс" required>
+            </div>
+         </div>
+         <div class="form__control">
+            <input type="text" name="speak" class="form__input" placeholder="Добавить комментарий">
+         </div>
+         <h2>Данные получателя</h2>
+         <div class="form__control">
+            <div class="form__control-el">
+               <input type="text" name="subname" class="form__input" placeholder="Фамилия" required>
+               <input type="text" name="name" class="form__input" placeholder="Имя" required>
+               <input type="text" name="secondname" class="form__input" placeholder="Отчество">
+            </div>
+         </div>
+         <div class="form__control">
+            <input type="tel" name="phone" class="form__input" placeholder="Номер телефона">
+            <label for="phone" class="form__label">По этому номеру телефона мы с вяжемся с вами для подтверждения
+               заказа</label>
+         </div>
+         <div class="form__control">
+            <input type="email" name="email" class="form__input" placeholder="E-mail">
+            <label for="email" class="form__label">На эту почту вам придет письмо с составом заказа, а так же
+               трэк-номер для его
+               отслеживания</label>
+         </div>
+         <div class="form__control-radio">
+            <input type="checkbox" name="check" class="form__input" checked>
+            <label for="check">"Подписаться на рассылку новинок и акций"</label>
+         </div>
+         <h2>Способ оплаты</h2>
+         <div class="form__control-radio">
+            <input type="radio" name="pay" class="form__input">
+            <label for="pay" class="form__label-radio">Оплата при получении наличными или картой</label>
+         </div>
+         <div class=".">
+            <input type="radio" name="pay" class="form__input" checked>
+            <label for="pay" class="form__label-radio">Оплата банковской картой онлайн</label>
+         </div>
+      </form>
+   </div>
+</body>
+
+</html>
